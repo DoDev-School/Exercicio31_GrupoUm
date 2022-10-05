@@ -72,9 +72,9 @@ class Aluno {
     }
 }
 
-let Luiz = new Aluno("Luiz", 24, 1.72, "Masculino")
+let Luiz = new Aluno("Luiz", 25, 1.72, "Masculino")
 let Marcos = new Aluno("Marcos", 27, 1.70, "Masculino")
-let Zizau = new Aluno("Zizau", 22, 1.63, "Masculino")
+let Zizau = new Aluno("Zizau", 23, 1.95, "Masculino")
 let Maria = new Aluno("Maria", 36, 1.90, "Feminino")
 let Joana = new Aluno("Joana", 20, 1.60, "Feminino")
 let Julia = new Aluno("Julia", 21, 1.75, "Feminino")
@@ -91,8 +91,10 @@ console.log(arrayAluno)
 // ● Que retorne o primeiro Aluno que tiver a idade par ou tiver mais que 1,90 de
 // altura.
 
+MediaAlturaMenorQue13Anos()
+MostrarMulherMaisAlta()
 console.log(MostrarHomemMaisNovo())
-
+console.log(MostrarAlunoIdadeParOuAltura())
 
 Media: Number
 function CalcularMedia() {
@@ -137,7 +139,7 @@ function MostrarHomemMaisNovo(){
     })
     return HomemMaisNovo
 }
-Pessoa: Number
-function MostrarAlunoIdadeParOuAltura(){
-    let Pessoa 
+
+function MostrarAlunoIdadeParOuAltura(){    
+    return arrayAluno.find(x => x.Idade %2 == 0 || x.Altura > 1.90)
 }
