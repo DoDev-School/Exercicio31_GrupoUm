@@ -91,10 +91,10 @@ console.log(arrayAluno)
 // ● Que retorne o primeiro Aluno que tiver a idade par ou tiver mais que 1,90 de
 // altura.
 
+console.log(MostrarHomemMaisNovo())
+
+
 Media: Number
-
-MediaAlturaMenorQue13Anos()
-
 function CalcularMedia() {
     let Media = 0
     arrayAluno.forEach(x => {
@@ -112,4 +112,32 @@ function MediaAlturaMenorQue13Anos() {
         }
     })
     console.log(ResultadoAlunos)
+}
+MaiorAlturaMulher: Number
+function MostrarMulherMaisAlta(){
+    let MaiorAlturaMulher = 0
+    arrayAluno.forEach(x => {
+        if(x.Sexo == "Feminino" && x.Altura > MaiorAlturaMulher){
+            MaiorAlturaMulher = x.Altura
+            console.log(MaiorAlturaMulher)
+        }
+    })
+    return MaiorAlturaMulher
+}
+IdadeMenor: Number
+HomemMaisNovo: String
+function MostrarHomemMaisNovo(){
+    let HomemMaisNovo = ""
+    let IdadeMenor = Infinity
+    arrayAluno.forEach(x => {
+        if(x.Sexo == "Masculino" && x.Idade < IdadeMenor){
+            HomemMaisNovo = x.Nome
+            IdadeMenor = x.Idade
+        }
+    })
+    return HomemMaisNovo
+}
+Pessoa: Number
+function MostrarAlunoIdadeParOuAltura(){
+    let Pessoa 
 }
