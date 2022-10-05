@@ -40,24 +40,29 @@ arrayImpar :Number
 // })
 // console.log(arrayC)
 
-// 3. Crie uma classe Aluno com as propriedades: nome: string
+// 3. Crie uma classe Aluno com as propriedades: 
+// nome: string
 // idade: number
 // altura: number
 // sexo: string
 // Depois crie um array e preencha-o com alguns objetos da classe Aluno, e crie as
 // seguintes funções:
-// ● Que exibe quantos alunos com mais de 13 anos tem uma altura menor do
-// que a média da altura de todos os alunos;
-// ● Que retorne a maior altura entre as mulheres;
-// ● Que retorne o nome do aluno mais novo entre os homens;
-// ● Que retorne o primeiro Aluno que tiver a idade par ou tiver mais que 1,90 de
-// altura.
 
+
+Nome: String
+Idade: Number
+Altura: Number
+Sexo: String
+
+nome: String 
+idade: Number 
+altura: Number 
+sexo: String
 class Aluno{
-    Nome : String
-    Idade : Number
-    Altura : Number
-    Sexo : String
+    Nome
+    Idade
+    Altura
+    Sexo 
 
     constructor(nome, idade, altura, sexo){
         this.Nome = nome
@@ -67,9 +72,26 @@ class Aluno{
     }
 }
 
+let Luiz = new Aluno("Luiz",24,1.72,"Masculino")
+let Marcos = new Aluno("Marcos",27,1.70,"Masculino")
+let Zizau = new Aluno("Zizau",22,1.63,"Masculino")
+
 arrayAluno : String
-let arrayAluno = []
+let arrayAluno = [Luiz,Marcos,Zizau]
+
+console.log(arrayAluno)
+
+// ● Que exibe quantos alunos com mais de 13 anos tem uma altura menor do
+// que a média da altura de todos os alunos;
+// ● Que retorne a maior altura entre as mulheres;
+// ● Que retorne o nome do aluno mais novo entre os homens;
+// ● Que retorne o primeiro Aluno que tiver a idade par ou tiver mais que 1,90 de
+// altura.
 
 
 
-
+function MediaAlturaMenorQue13Anos(){
+    arrayAluno.forEach(x => {
+        if(x.Idade > 13 && x.Idade < )
+    })
+}
