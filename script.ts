@@ -4,9 +4,9 @@ console.log("Olá Mundo!")
 // Depois armazene em um array PAR todos os números que forem pares, e em um
 // array ÍMPAR os que forem ímpares, no final exiba os três vetores
 
-arrayPrincipal :Number
-arrayPar :Number
-arrayImpar :Number
+arrayPrincipal: Number
+arrayPar: Number
+arrayImpar: Number
 
 // let arrayPrincipal = [2,3,1,5,7,4,8,9,0,10]
 // let arrayPar = arrayPrincipal.filter(x => x%2 == 0)
@@ -54,17 +54,17 @@ Idade: Number
 Altura: Number
 Sexo: String
 
-nome: String 
-idade: Number 
-altura: Number 
+nome: String
+idade: Number
+altura: Number
 sexo: String
-class Aluno{
+class Aluno {
     Nome
     Idade
     Altura
-    Sexo 
+    Sexo
 
-    constructor(nome, idade, altura, sexo){
+    constructor(nome, idade, altura, sexo) {
         this.Nome = nome
         this.Idade = idade
         this.Altura = altura
@@ -72,12 +72,15 @@ class Aluno{
     }
 }
 
-let Luiz = new Aluno("Luiz",24,1.72,"Masculino")
-let Marcos = new Aluno("Marcos",27,1.70,"Masculino")
-let Zizau = new Aluno("Zizau",22,1.63,"Masculino")
+let Luiz = new Aluno("Luiz", 24, 1.72, "Masculino")
+let Marcos = new Aluno("Marcos", 27, 1.70, "Masculino")
+let Zizau = new Aluno("Zizau", 22, 1.63, "Masculino")
+let Maria = new Aluno("Maria", 36, 1.90, "Feminino")
+let Joana = new Aluno("Joana", 20, 1.60, "Feminino")
+let Julia = new Aluno("Julia", 21, 1.75, "Feminino")
 
-arrayAluno : String
-let arrayAluno = [Luiz,Marcos,Zizau]
+arrayAluno: String
+let arrayAluno = [Luiz, Marcos, Zizau, Maria, Joana, Julia]
 
 console.log(arrayAluno)
 
@@ -88,10 +91,25 @@ console.log(arrayAluno)
 // ● Que retorne o primeiro Aluno que tiver a idade par ou tiver mais que 1,90 de
 // altura.
 
+Media: Number
 
+MediaAlturaMenorQue13Anos()
 
-function MediaAlturaMenorQue13Anos(){
+function CalcularMedia() {
+    let Media = 0
     arrayAluno.forEach(x => {
-        if(x.Idade > 13 && x.Idade < )
+        Media = Media + x.Altura
     })
+    Media = Media / arrayAluno.length
+    return Media
+}
+ResultadoAlunos: Number
+function MediaAlturaMenorQue13Anos() {
+    let ResultadoAlunos = 0
+    arrayAluno.forEach(x => {
+        if (x.Idade > 13 && x.Altura < CalcularMedia()) {
+            ResultadoAlunos++
+        }
+    })
+    console.log(ResultadoAlunos)
 }
